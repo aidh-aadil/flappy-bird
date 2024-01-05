@@ -55,9 +55,14 @@ while running:
                 y_positions.append(random.randint(0, 400))
                 score += 1
 
-    score_text = font.render('Score: ' + str(score), True, colors["black"])
+    if game_over:
+        game_over_text = game_over_font.render('Game over!', True, colors['black'])
+        screen.blit(game_over_text, (WIDTH / 2 - 130, HEIGHT / 2 - 20))
+
+    score_text = font.render('Score: ' + str(score), True, colors['black'])
     screen.blit(score_text, (20, 30))
 
     pygame.display.flip()      
 
-pygame.quit()  
+pygame.quit() 
+sys.exit() 

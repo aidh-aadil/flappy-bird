@@ -1,5 +1,6 @@
 import pygame
 import random
+import sys
 
 pygame.font.init()
 
@@ -37,7 +38,8 @@ pygame.display.set_caption('Flappy bird')
 
 speed = 3
 score = 0
-font = pygame.font.SysFont('Josefin Sans', 20)
+font = pygame.font.Font('graphics/josefinsans.ttf', 20)
+game_over_font = pygame.font.Font('graphics/anton.ttf', 50)
 
 colors = {
     "black": "#000000",
