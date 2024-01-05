@@ -27,8 +27,8 @@ bg = pygame.transform.scale(bg, (WIDTH, HEIGHT))
 flappybird = pygame.image.load('graphics/bird.png')  
 flappybird = pygame.transform.scale(flappybird, (PLAYER_WIDTH, PLAYER_HEIGHT)) 
 flappybird_rect = flappybird.get_rect()
-flappybird_rect.width = PLAYER_WIDTH
-flappybird_rect.height = PLAYER_HEIGHT
+flappybird_rect.width = PLAYER_WIDTH - 10
+flappybird_rect.height = PLAYER_HEIGHT - 10
 flappybird_rect.center = [player_x, player_y]
 
 screen = pygame.display.set_mode([WIDTH, HEIGHT])

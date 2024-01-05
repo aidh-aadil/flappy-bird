@@ -52,11 +52,11 @@ while running:
                 pipes.remove(pipes[i])
                 y_positions.remove(y_positions[i])
                 pipes.append(random.randint(pipes[-1] + 280, pipes[-1] + 320))
-                y_positions.append(random.randint(0, 500))
+                y_positions.append(random.randint(0, 400))
                 score += 1
 
     score_text = font.render('Score: ' + str(score), True, colors["black"])
-    screen.blit(score_text, (30, 30))
+    screen.blit(score_text, (20, 30))
 
     pygame.display.flip()      
 
