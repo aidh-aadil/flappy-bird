@@ -38,9 +38,12 @@ while running:
     if player_y + y_change < HEIGHT - PLAYER_HEIGHT:
         player_y += y_change
         y_change += gravity
+        flappybird_rect.center = [player_x, player_y]
 
     else: 
         player_y = HEIGHT - PLAYER_HEIGHT 
+        flappybird_rect.center = [player_x, player_y]
+
 
     for i in range(len(pipes)):
         if not game_over:

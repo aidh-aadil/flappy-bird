@@ -21,14 +21,14 @@ pipes = [400, 700, 1000, 1300, 1600]
 generate_places = True
 y_positions = []
 
-bg = pygame.image.load('graphics/bg.png')  
+bg = pygame.image.load('graphics/background.png')  
 bg = pygame.transform.scale(bg, (WIDTH, HEIGHT)) 
 
-flappybird = pygame.image.load('graphics/flappybird.png')  
+flappybird = pygame.image.load('graphics/bird.png')  
 flappybird = pygame.transform.scale(flappybird, (PLAYER_WIDTH, PLAYER_HEIGHT)) 
 flappybird_rect = flappybird.get_rect()
-flappybird_rect.width *= 2
-flappybird_rect.height *= 2
+flappybird_rect.width = PLAYER_WIDTH
+flappybird_rect.height = PLAYER_HEIGHT
 flappybird_rect.center = [player_x, player_y]
 
 screen = pygame.display.set_mode([WIDTH, HEIGHT])
