@@ -3,6 +3,7 @@ import random
 import sys
 
 pygame.font.init()
+pygame.mixer.init()
 
 WIDTH = 800
 HEIGHT = 600
@@ -35,6 +36,7 @@ flappybird_rect.center = [player_x, player_y]
 screen = pygame.display.set_mode([WIDTH, HEIGHT])
 timer = pygame.time.Clock()
 pygame.display.set_caption('Flappy bird')
+jump_sound = pygame.mixer.Sound('sound/jump_sound.mp3')
 
 speed = 3
 score = 0

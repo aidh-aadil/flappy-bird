@@ -34,6 +34,7 @@ while running:
         if event.type == pygame.KEYDOWN and not game_over:
             if event.key == pygame.K_SPACE:
                 y_change = -jump_height
+                jump_sound.play()
 
     if player_y + y_change < HEIGHT - PLAYER_HEIGHT:
         player_y += y_change
