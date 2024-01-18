@@ -37,6 +37,8 @@ screen = pygame.display.set_mode([WIDTH, HEIGHT])
 timer = pygame.time.Clock()
 pygame.display.set_caption('Flappy bird')
 jump_sound = pygame.mixer.Sound('sound/jump_sound.mp3')
+game_over_sound = pygame.mixer.Sound('sound/game_over.mp3')
+game_over_sound_played = False
 
 speed = 3
 score = 0

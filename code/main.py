@@ -7,12 +7,16 @@ game_over = False
 
 def draw_pipes(obst, y_pos, player):
     global game_over
+    global game_over_sound_played
     for i in range(len(obst)):
         y_coord = y_pos[i]
         top_rect = pygame.draw.rect(screen, colors["green"], [obst[i], 0, 60, y_coord], 0, 5)
         bottom_rect = pygame.draw.rect(screen, colors["green"], [obst[i], y_coord + 200, 60, HEIGHT -(y_coord - 70)], 0, 5)
         if top_rect.colliderect(player) or bottom_rect.colliderect(player):
             game_over = True
+            if not game_over_sound_played:
+                game_over_sound.play()
+                game_over_sound_played = True
 
 while running:
     timer.tick(FPS)
